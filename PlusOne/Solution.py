@@ -33,5 +33,5 @@ class Solution:
 
 
 sol = Solution()
-digits = [6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,3]
+digits = [4,3,2,1]
 sol.plusOne(digits)
