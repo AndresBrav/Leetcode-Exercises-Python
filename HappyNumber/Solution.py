@@ -2,21 +2,19 @@ class Solution:
     def isHappy(self, n: int) -> bool:
 
         state: bool = True
-        first = self.verify(n)
-        print("first is "+str(first))
-
+        numberList: list[int] = []
         walk: int = n
         print("walk is "+str(walk))
-        counter = 0
 
         while state:
-            if first == walk:
-                counter += 1
-            if (counter >= 2):
+            walk = self.verify(walk)
+            numberList.append(walk)
+            print("walk is "+str(walk))
+            repeatcantity = numberList.count(walk)
+            if (repeatcantity > 1):
                 state = False
                 return False
-            walk = self.verify(walk)
-            print("walk is "+str(walk))
+
             if (walk == 1):
                 state = False
                 return True
