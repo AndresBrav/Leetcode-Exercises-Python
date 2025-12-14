@@ -7,25 +7,30 @@ class Solution:
         iterator= True
 
         zeros = nums.count(0)
-
+        
         counter = 0
         i=0
         while iterator:
             # print("size of array is "+str(len(nums)))
-            if(nums[i]==0):
-                nums.pop(i)
-                counter +=1
-                if counter ==zeros:
-                    iterator = False
-                    for x in range(zeros):
-                        nums.append(0)
-                
+            if i < len(nums):
+                if(nums[i]==0):
+                    nums.pop(i)
+                    counter +=1
+                    if counter ==zeros:
+                        iterator = False
+                        for x in range(zeros):
+                            nums.append(0)
+                        
+                else:
+                    i+=1
             else:
-                i+=1
+                iterator = False
+
+        
 
         print(nums)
 
 
 a = Solution()
-# a.moveZeroes([0])
-a.moveZeroes([0,1,0,3,12])
+a.moveZeroes([0])
+# a.moveZeroes([1,3,0,4,5])
