@@ -15,5 +15,5 @@ class Solution:
         return n3
 
 res = Solution()
-print(res.climbStairs(7))
+print(res.climbStairs(98))
 
